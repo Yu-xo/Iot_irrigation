@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.system-info {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+}
+
+.card p {
+    margin: 10px 0;
+    color: #666;
+}
+
+.card span {
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+.api-info {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+    color: #888;
+    font-size: 0.8em;
+}
+
+.aqi-scale, .light-scale {
+    margin: 15px 0;
+    font-size: 0.8em;
+    color: #666;
+}
+
+.scale-item {
+    padding: 2px 5px;
+    margin: 2px 0;
+    border-radius: 3px;
+}
+
+.good { background-color: #e6ffe6; }
+.moderate { background-color: #fff3e6; }
+.unhealthy { background-color: #ffe6e6; }
+
+.status-indicator {
+    margin: 15px 0;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+
+.system-details {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.system-details h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.info-item {
+    padding: 10px;
+}
+
+.info-item h4 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.info-item ul {
+    list-style-position: inside;
+    color: #666;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+}

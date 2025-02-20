@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Agriculture Monitoring System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Smart Agriculture Monitoring System</h1>
+            <div class="system-info">
+                <p>Real-time monitoring and control system for smart agriculture</p>
+                <p>Update Interval: 30 seconds</p>
+            </div>
+        </header>
+        
+        <div class="dashboard">
+            <div class="card" id="weather-card">
+                <h2>Weather Information</h2>
+                <p>Location: <span id="location">Loading...</span></p>
+                <p>Temperature: <span id="temperature">Loading...</span></p>
+                <p>Humidity: <span id="humidity">Loading...</span></p>
+                <p>Description: <span id="weather-desc">Loading...</span></p>
+                <div class="api-info">
+                    <small>Data source: OpenWeatherMap API</small>
+                </div>
+            </div>
+
+            <div class="card" id="air-quality-card">
+                <h2>Air Quality</h2>
+                <p>AQI: <span id="aqi">Loading...</span></p>
+                <div class="aqi-scale">
+                    <div class="scale-item good">Good (0-50)</div>
+                    <div class="scale-item moderate">Moderate (51-100)</div>
+                    <div class="scale-item unhealthy">Unhealthy (101+)</div>
+                </div>
+                <div class="api-info">
+                    <small>Data source: World Air Quality Index (WAQI) API</small>
+                </div>
+            </div>
+
+            <div class="card" id="soil-card">
+                <h2>Soil Conditions</h2>
+                <p>Moisture: <span id="soil-moisture">Loading...</span>%</p>
+                <p>Temperature: <span id="soil-temperature">Loading...</span>°C</p>
+                <p>pH Level: <span id="soil-ph">Loading...</span></p>
+                <div class="status-indicator">
+                    <p>Watering System: <span id="watering-status">Checking...</span></p>
+                </div>
+                <div class="api-info">
+                    <small>Data source: Local Sensor Network</small>
+                </div>
+            </div>
+
+            <div class="card" id="light-card">
+                <h2>Light Conditions</h2>
+                <p>Intensity: <span id="light-intensity">Loading...</span> lux</p>
+                <div class="light-scale">
+                    <div>Dark: 0-100 lux</div>
+                    <div>Dim: 101-500 lux</div>
+                    <div>Bright: 501+ lux</div>
+                </div>
+                <div class="api-info">
+                    <small>Data source: Local Sensor Network</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="system-details">
+            <h3>System Information</h3>
+            <div class="info-grid">
+                <div class="info-item">
+                    <h4>APIs Used</h4>
+                    <ul>
+                        <li>OpenWeatherMap - Weather data</li>
+                        <li>WAQI - Air quality monitoring</li>
+                        <li>IPInfo - Location detection</li>
+                    </ul>
+                </div>
+                <div class="info-item">
+                    <h4>Sensor Network</h4>
+                    <ul>
+                        <li>Soil Moisture Sensor</li>
+                        <li>Soil Temperature Sensor</li>
+                        <li>pH Level Sensor</li>
+                        <li>Light Intensity Sensor</li>
+                    </ul>
+                </div>
+                <div class="info-item">
+                    <h4>Update Intervals</h4>
+                    <ul>
+                        <li>Sensor Data: Real-time</li>
+                        <li>Weather: Every 5 minutes</li>
+                        <li>Air Quality: Every 5 minutes</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="last-updated">
+                Last Updated: <span id="timestamp">Never</span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
